@@ -1,0 +1,86 @@
+<div class="logo">
+	<div class="logo-icon">
+		<img 
+			src="/src/assets/logo.jpeg" 
+			alt="iK-Board Repair Logo"
+			class="logo-image"
+		/>
+	</div>
+	<div class="logo-text">
+		<span class="brand-name"></span>
+		<span class="brand-tagline"></span>
+	</div>
+</div>
+
+<style>
+	.logo {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		font-weight: 600;
+	}
+
+	.logo-icon {
+		position: relative;
+		width: 190px;
+		height: 190px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.logo-image {
+		width: 150px;
+		height: 150px;
+		border-radius: 150px;
+		object-fit: cover;
+		border: 2px solid #0ea5e9;
+		box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+	}
+
+	.logo-text {
+		display: flex;
+		flex-direction: column;
+		line-height: 1.1;
+	}
+
+	.brand-name {
+		font-size: 24px;
+		font-weight: 700;
+		color: #ffffff;
+		letter-spacing: -0.02em;
+	}
+
+	.brand-tagline {
+		font-size: 12px;
+		font-weight: 600;
+		color: #0ea5e9;
+		letter-spacing: 0.1em;
+		margin-left: 2px;
+	}
+
+	@media (max-width: 768px) {
+		.logo {
+			gap: 10px;
+		}
+
+		.logo-icon {
+			width: 40px;
+			height: 40px;
+		}
+
+		.logo-image {
+			width: 40px;
+			height: 40px;
+			border-radius: 6px;
+		}
+
+		.brand-name {
+			font-size: 20px;
+		}
+
+		.brand-tagline {
+			font-size: 10px;
+		}
+	}
+</style>
