@@ -1,0 +1,234 @@
+---
+---
+
+<section class="coming-soon">
+	<div class="coming-soon-container">
+		<div class="store-preview">
+			<div class="store-icon">
+				<svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
+					<path d="M7 18c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+				</svg>
+			</div>
+			
+			<div class="store-content">
+				<h3 class="store-title">Tienda Online</h3>
+				<div class="coming-soon-badge">
+					<span class="badge-text">Próximamente</span>
+					<div class="badge-glow"></div>
+				</div>
+				<p class="store-description">
+					Pronto podrás comprar repuestos y accesorios directamente desde nuestra tienda online
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.coming-soon {
+		padding: 80px 0;
+		background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.coming-soon::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: linear-gradient(90deg, transparent 0%, #0ea5e9 50%, transparent 100%);
+	}
+
+	.coming-soon::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background: linear-gradient(90deg, transparent 0%, #0ea5e9 50%, transparent 100%);
+	}
+
+	.coming-soon-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 32px;
+		display: flex;
+		justify-content: center;
+	}
+
+	.store-preview {
+		display: flex;
+		align-items: center;
+		gap: 32px;
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 20px;
+		padding: 40px 48px;
+		backdrop-filter: blur(10px);
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.store-preview::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent);
+		transition: left 2s ease-in-out;
+	}
+
+	.store-preview:hover {
+		background: rgba(255, 255, 255, 0.08);
+		border-color: rgba(14, 165, 233, 0.3);
+		transform: translateY(-4px);
+		box-shadow: 
+			0 20px 40px rgba(0, 0, 0, 0.3),
+			0 0 0 1px rgba(14, 165, 233, 0.1);
+	}
+
+	.store-preview:hover::before {
+		left: 100%;
+	}
+
+	.store-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 120px;
+		height: 120px;
+		background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+		border-radius: 20px;
+		color: #ffffff;
+		transition: all 0.4s ease;
+		position: relative;
+		flex-shrink: 0;
+	}
+
+	.store-icon::after {
+		content: '';
+		position: absolute;
+		inset: -2px;
+		background: linear-gradient(135deg, #0ea5e9, #06b6d4, #0ea5e9);
+		border-radius: 22px;
+		z-index: -1;
+		opacity: 0;
+		transition: opacity 0.4s ease;
+	}
+
+	.store-preview:hover .store-icon {
+		transform: scale(1.05);
+		box-shadow: 0 12px 30px rgba(14, 165, 233, 0.4);
+	}
+
+	.store-preview:hover .store-icon::after {
+		opacity: 1;
+	}
+
+	.store-content {
+		flex: 1;
+		text-align: left;
+	}
+
+	.store-title {
+		font-size: 32px;
+		font-weight: 700;
+		color: #ffffff;
+		margin-bottom: 16px;
+		letter-spacing: -0.02em;
+	}
+
+	.coming-soon-badge {
+		position: relative;
+		display: inline-block;
+		margin-bottom: 16px;
+	}
+
+	.badge-text {
+		background: linear-gradient(135deg, #f59e0b, #f97316);
+		color: #ffffff;
+		padding: 8px 20px;
+		border-radius: 20px;
+		font-size: 14px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		position: relative;
+		z-index: 2;
+		display: inline-block;
+		box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+	}
+
+	.badge-glow {
+		position: absolute;
+		inset: -2px;
+		background: linear-gradient(135deg, #f59e0b, #f97316, #f59e0b);
+		border-radius: 22px;
+		z-index: 1;
+		opacity: 0;
+		animation: pulse 2s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%, 100% {
+			opacity: 0;
+			transform: scale(1);
+		}
+		50% {
+			opacity: 0.3;
+			transform: scale(1.05);
+		}
+	}
+
+	.store-description {
+		color: #94a3b8;
+		font-size: 16px;
+		line-height: 1.6;
+		margin: 0;
+		max-width: 400px;
+	}
+
+	@media (max-width: 768px) {
+		.coming-soon {
+			padding: 60px 0;
+		}
+
+		.coming-soon-container {
+			padding: 0 20px;
+		}
+
+		.store-preview {
+			flex-direction: column;
+			text-align: center;
+			gap: 24px;
+			padding: 32px 24px;
+		}
+
+		.store-icon {
+			width: 100px;
+			height: 100px;
+		}
+
+		.store-icon svg {
+			width: 48px;
+			height: 48px;
+		}
+
+		.store-title {
+			font-size: 24px;
+			margin-bottom: 12px;
+		}
+
+		.store-description {
+			font-size: 14px;
+			max-width: 100%;
+		}
+	}
+</style>
